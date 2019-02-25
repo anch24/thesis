@@ -36,6 +36,33 @@ return [
     */
 
     'guards' => [
+        'admin' => [
+            'driver'   => 'session',
+            'provider' => 'admins',
+        ],
+
+        'staff' => [
+            'driver'   => 'session',
+            'provider' => 'staff',
+        ],
+
+        'instructor' => [
+            'driver'   => 'session',
+            'provider' => 'instructors',
+        ],
+
+        'chairperson' => [
+            'driver'   => 'session',
+            'provider' => 'chairpeople',
+        ],
+
+        'student' => [
+            'driver'   => 'session',
+            'provider' => 'students',
+        ],
+
+        
+
         'web' => [
             'driver' => 'session',
             'provider' => 'users',
@@ -45,6 +72,25 @@ return [
             'driver' => 'token',
             'provider' => 'users',
         ],
+
+        /*
+        'chairperson' => [
+            'driver' => 'session',
+            'provider' => 'chairpersons',
+        ],
+
+        'instructor' => [
+            'driver' => 'session',
+            'provider' => 'instructors',
+        ],
+
+        'staff' => [
+            'driver' => 'session',
+            'provider' => 'staffs',
+        ],
+
+        
+        */
     ],
 
     /*
@@ -65,6 +111,33 @@ return [
     */
 
     'providers' => [
+        'admins' => [
+            'driver' => 'eloquent',
+            'model'  => App\Admin::class,
+        ],
+
+        'staff' => [
+            'driver' => 'eloquent',
+            'model'  => App\Staff::class,
+        ],
+
+        'instructors' => [
+            'driver' => 'eloquent',
+            'model'  => App\Instructor::class,
+        ],
+
+        'chairpeople' => [
+            'driver' => 'eloquent',
+            'model'  => App\Chairperson::class,
+        ],
+
+        'students' => [
+            'driver' => 'eloquent',
+            'model'  => App\Student::class,
+        ],
+
+        
+
         'users' => [
             'driver' => 'eloquent',
             'model' => App\User::class,
@@ -92,6 +165,42 @@ return [
     */
 
     'passwords' => [
+        'admins' => [
+            'provider' => 'admins',
+            'table'    => 'password_resets',
+            'expire'   => 60,
+        ],
+
+        'staff' => [
+            'provider' => 'staff',
+            'table'    => 'password_resets',
+            'expire'   => 60,
+        ],
+
+        'instructors' => [
+            'provider' => 'instructors',
+            'table'    => 'password_resets',
+            'expire'   => 60,
+        ],
+
+        'chairpeople' => [
+            'provider' => 'chairpeople',
+            'table'    => 'password_resets',
+            'expire'   => 60,
+        ],
+
+        'students' => [
+            'provider' => 'students',
+            'table'    => 'password_resets',
+            'expire'   => 60,
+        ],
+
+        'students' => [
+            'provider' => 'students',
+            'table'    => 'password_resets',
+            'expire'   => 60,
+        ],
+
         'users' => [
             'provider' => 'users',
             'table' => 'password_resets',

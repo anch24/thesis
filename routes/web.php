@@ -19,12 +19,6 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-//Students dashboard
-Route::get('/students', function () {
-    return view('students.dashboard');
-});
-
-//Staff dashboard
-Route::get('/staff', function () {
-    return view('staff.dashboard');
+Route::get('/signin', function () {
+    return view('admin.auth.signin');
 });

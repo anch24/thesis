@@ -39,8 +39,103 @@ class RouteServiceProvider extends ServiceProvider
 
         $this->mapWebRoutes();
 
+        $this->mapAdminRoutes();
+
+        $this->mapStaffRoutes();
+
+        $this->mapInstructorRoutes();
+
+        $this->mapChairpersonRoutes();
+
+        $this->mapStudentRoutes();
+
         //
+    }    
+    
+    /**
+     * Define the "student" routes for the application.
+     *
+     * These routes are typically stateless.
+     *
+     * @return void
+     */
+    protected function mapStudentRoutes()
+    {
+        Route::prefix('student')
+             ->middleware(['web'])
+             ->namespace($this->namespace)
+             ->group(base_path('routes/student.php'));
+    }    
+    
+    /**
+     * Define the "chairperson" routes for the application.
+     *
+     * These routes are typically stateless.
+     *
+     * @return void
+     */
+    protected function mapChairpersonRoutes()
+    {
+        Route::prefix('chairperson')
+             ->middleware(['web'])
+             ->namespace($this->namespace)
+             ->group(base_path('routes/chairperson.php'));
+    }    
+    
+    /**
+     * Define the "instructor" routes for the application.
+     *
+     * These routes are typically stateless.
+     *
+     * @return void
+     */
+    protected function mapInstructorRoutes()
+    {
+        Route::prefix('instructor')
+             ->middleware(['web'])
+             ->namespace($this->namespace)
+             ->group(base_path('routes/instructor.php'));
+    }    
+    
+    /**
+     * Define the "staff" routes for the application.
+     *
+     * These routes are typically stateless.
+     *
+     * @return void
+     */
+    protected function mapStaffRoutes()
+    {
+        Route::prefix('staff')
+             ->middleware(['web'])
+             ->namespace($this->namespace)
+             ->group(base_path('routes/staff.php'));
+    }    
+    
+    /**
+     * Define the "admin" routes for the application.
+     *
+     * These routes are typically stateless.
+     *
+     * @return void
+     */
+    protected function mapAdminRoutes()
+    {
+        Route::prefix('admin')
+             ->middleware(['web'])
+             ->namespace($this->namespace)
+             ->group(base_path('routes/admin.php'));
     }
+
+
+
+
+
+
+
+
+
+
 
     /**
      * Define the "web" routes for the application.
