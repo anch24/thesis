@@ -9,7 +9,7 @@
     <meta name="author" content="">
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="/material/assets/images/favicon.png">
-    <title>Login Page</title>
+    <title>Login</title>
     <!-- Bootstrap Core CSS -->
     <link href="/material/assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom CSS -->
@@ -31,12 +31,33 @@
                         @csrf
                         <div class="form-group">
                             <div class="col-md-12">
-                                <input type="email" placeholder="Email or Username" class="form-control form-control-line" name="email" id="email">
+                                <input type="email" placeholder="Email or Username" class="form-control form-control-line {{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" name="email" id="email" required autofocus>
+                                @if ($errors->has('email'))
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('email') }}</strong>
+                                    </span>
+                                @endif
                             </div>
                         </div>
                         <div class="form-group">
                             <div class="col-md-12">
-                                <input type="password" placeholder="Password" class="form-control form-control-line">
+                                <input type="password" name="password" placeholder="Password" class="form-control form-control-line {{ $errors->has('password') ? ' is-invalid' : '' }}">
+                                @if ($errors->has('password'))
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('password') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
+
+                                    <label class="form-check-label" for="remember">
+                                        {{ __('Remember Me') }}
+                                    </label>
+                                </div>
                             </div>
                         </div>
                         <div class="form-group">

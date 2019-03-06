@@ -2,6 +2,13 @@
 
 Route::group(['namespace' => 'Admin'], function() {
     Route::get('/', 'HomeController@index')->name('admin.dashboard');
+    Route::get('/course', 'HomeController@course');
+    Route::get('/class', 'HomeController@class');
+    Route::get('/students', 'HomeController@students');
+    Route::get('/staff', 'HomeController@staff');
+    Route::get('/instructor', 'HomeController@instructor');
+    Route::get('/chairperson', 'HomeController@chairperson');
+    Route::get('/profile', 'HomeController@profile');
 
     // Login
     Route::get('login', 'Auth\LoginController@showLoginForm')->name('admin.login');

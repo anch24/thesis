@@ -2,6 +2,8 @@
 
 Route::group(['namespace' => 'Staff'], function() {
     Route::get('/', 'HomeController@index')->name('staff.dashboard');
+    Route::get('/profile', 'HomeController@profile');
+    Route::get('/students', 'HomeController@students');
 
     // Login
     Route::get('login', 'Auth\LoginController@showLoginForm')->name('staff.login');
@@ -17,5 +19,6 @@ Route::group(['namespace' => 'Staff'], function() {
     Route::post('password/reset', 'Auth\ResetPasswordController@reset');
     Route::get('password/reset', 'Auth\ForgotPasswordController@showLinkRequestForm')->name('staff.password.request');
     Route::get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm')->name('staff.password.reset');
+
 
 });

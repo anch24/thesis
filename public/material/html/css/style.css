@@ -485,6 +485,9 @@ Background Colors
 .bg-danger {
   background-color: #fc4b6c !important; }
 
+.bg-green {
+  background-color: #00C853 !important; color:white;}
+
 html body .bg-megna {
   background-color: #00897b; }
 
@@ -1201,6 +1204,27 @@ Buttons
     -webkit-box-shadow: 0 14px 26px -12px rgba(248, 194, 0, 0.42), 0 4px 23px 0 rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(248, 194, 0, 0.2);
     box-shadow: 0 14px 26px -12px rgba(248, 194, 0, 0.42), 0 4px 23px 0 rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(248, 194, 0, 0.2); }
 
+/* Custom */
+.btn-outline-add {
+color: #00E676;
+background-color: transparent;
+border-color: #00E676;
+-webkit-box-shadow: 0 2px 2px 0 rgba(27, 94, 32, 0.14), 0 3px 1px -2px rgba(27, 94, 32, 0.2), 0 1px 5px 0 rgba(27, 94, 32, 0.12);
+box-shadow: 0 2px 2px 0 rgba(27, 94, 32, 0, 0.14), 0 3px 1px -2px rgba(27, 94, 32, 0.2), 0 1px 5px 0 rgba(27, 94, 32, 0.12);
+-webkit-transition: 0.2s ease-in;
+-o-transition: 0.2s ease-in;
+transition: 0.2s ease-in; }
+.btn-outline-add:hover, .btn-outline-add:focus, .btn-outline-add.focus {
+background: #00E676;
+border-color: #00E676;
+color: #ffffff;
+-webkit-box-shadow: 0 14px 26px -12px rgba(27, 94, 32, 0.42), 0 4px 23px 0 rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(27, 94, 32, 0.2);
+box-shadow: 0 14px 26px -12px rgba(27, 94, 32, 0.42), 0 4px 23px 0 rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(27, 94, 32, 0.2); }
+.btn-outline-add.active, .btn-outline-add:focus {
+-webkit-box-shadow: 0 14px 26px -12px rgba(27, 94, 32, 0.42), 0 4px 23px 0 rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(27, 94, 32, 0.2);
+box-shadow: 0 14px 26px -12px rgba(27, 94, 32, 0.42), 0 4px 23px 0 rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(27, 94, 32, 0.2); }    
+
+
 .btn-outline-danger {
   color: #fc4b6c;
   background-color: transparent;
@@ -1336,6 +1360,19 @@ Buttons
 .open > .dropdown-toggle.btn-red {
   background-color: #d61f1f;
   border: 1px solid #d61f1f;
+  color: #ffffff; }
+
+.btn-green:hover,
+.btn-green:focus,
+.btn-green:active,
+.btn-green.active,
+.btn-green.focus,
+.btn-green:active,
+.btn-green:focus,
+.btn-green:hover,
+.open > .dropdown-toggle.btn-green {
+  background-color: #00C853;
+  border: 1px solid #00C853;
   color: #ffffff; }
 
 .button-box .btn {

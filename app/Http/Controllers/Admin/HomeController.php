@@ -28,4 +28,32 @@ class HomeController extends Controller
         return view('admin.home');
     }
 
+    public function course() {
+        return view('admin.course');
+    }
+
+    public function class() {
+        return view('admin.class');
+    }
+
+    public function students() {
+        return view('admin.students');
+    }
+
+    public function staff() {
+        return view('admin.staff');
+    }
+
+    public function instructor() {
+        return view('admin.instructor');
+    }
+
+    public function chairperson() {
+        return view('admin.chairperson');
+    }
+    
+    public function profile() {
+        return view('admin.profile');
+    }
+
 }
